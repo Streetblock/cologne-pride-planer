@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Pride Tracker">
+  <rect width="512" height="512" rx="112" fill="#ffffff"/>
+  <path d="M0 116h512v46H0z" fill="#e40303"/>
+  <path d="M0 162h512v46H0z" fill="#ff8c00"/>
+  <path d="M0 208h512v46H0z" fill="#ffed00"/>
+  <path d="M0 254h512v46H0z" fill="#008026"/>
+  <path d="M0 300h512v46H0z" fill="#24408e"/>
+  <path d="M0 346h512v50H0z" fill="#732982"/>
+  <circle cx="256" cy="256" r="120" fill="#ffffff" opacity=".96"/>
+  <path d="M256 130c-55 0-100 43-100 96 0 78 100 156 100 156s100-78 100-156c0-53-45-96-100-96zm0 138a42 42 0 1 1 0-84 42 42 0 0 1 0 84z" fill="#111827"/>
+</svg>
