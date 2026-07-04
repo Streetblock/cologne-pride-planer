@@ -1,7 +1,7 @@
 {
-  "name": "CSD Koeln 2026 Pride Tracker",
-  "short_name": "Pride Tracker",
-  "description": "Startreihenfolge, Favoriten und Live-ETA fuer den Cologne Pride 2026.",
+  "name": "Cologne Pride Planer",
+  "short_name": "Pride Planer",
+  "description": "Startreihenfolge, Favoriten und ETA-Prognose fuer den Cologne Pride 2026.",
   "lang": "de",
   "start_url": "./index.html",
   "scope": "./",

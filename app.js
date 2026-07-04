@@ -1,6 +1,6 @@
 /**
  * MODEL-KLASSE
- * Verwaltet Daten, Favoriten und das Live-Tracking
+ * Verwaltet Daten, Favoriten und lokale Markierungen
  */
 class ParadeModel {
     constructor(data) {
@@ -29,7 +29,7 @@ class ParadeModel {
         localStorage.setItem('csd_favorites_2026', JSON.stringify(this.favorites));
     }
 
-    // Live Tracking
+    // Lokale Markierungen
     toggleTracking(id) {
         if (this.tracking[id]) {
             delete this.tracking[id];
@@ -246,10 +246,10 @@ class UIController {
         if (!stats.active) {
             this.trackingBanner.classList.add("bg-gray-50", "text-gray-600", "border-gray-200");
             if (stats.count === 0) {
-                this.trackingText.innerHTML = "📍 Markiere Gruppen mit <b>Jetzt da!</b>, um ETAs zu berechnen.";
+            this.trackingText.innerHTML = "📍 Markiere Gruppen mit <b>Jetzt da!</b>, um ETAs zu berechnen.";
                 this.btnResetTrack.classList.add('hidden');
             } else if (stats.count === 1) {
-                this.trackingText.innerHTML = "⏳ 1 Gruppe erfasst. Markiere eine weitere für die Live-Prognose!";
+            this.trackingText.innerHTML = "⏳ 1 Gruppe erfasst. Markiere eine weitere für die Prognose!";
             }
             if (stats.needsDistance) {
                 this.trackingText.innerHTML = `${stats.count} Gruppen erfasst. Für den ersten ETA-Start bitte zwei Marker mit mehr als ${stats.minimumPairGap - 1} Gruppen Abstand setzen.`;
@@ -260,10 +260,10 @@ class UIController {
                 this.trackingBanner.classList.add("text-amber-900", "banner-fav-active");
                 this.trackingText.innerHTML = `⭐ <b>Nächster Favorit:</b> ${stats.nextFav.id} - ${stats.nextFav.name} <b>${this.formatDiffMinutes(stats.nextFavEta)}</b> (${this.formatTime(stats.nextFavEta)})`;
             } else {
-                // Normaler Live-Banner
+            // Normaler Prognose-Banner
                 this.trackingBanner.classList.add("bg-indigo-50", "text-indigo-800", "border-indigo-200");
                 const speedMin = Math.max(0.1, Math.round((stats.speed / 60000) * 10) / 10);
-                this.trackingText.innerHTML = `🚀 <b>Live-Prognose aktiv</b> (Ø ${speedMin} Min/Gruppe).`;
+            this.trackingText.innerHTML = `🚀 <b>Prognose aktiv</b> (Ø ${speedMin} Min/Gruppe).`;
             }
         }
     }
@@ -285,7 +285,7 @@ class UIController {
 
         const displayNumber = item.sub ? `<span class="text-2xl">${item.num}</span><span class="text-sm font-bold text-indigo-600">${item.sub}</span>` : `<span class="text-2xl">${item.num}</span>`;
 
-        // Tracking Button Logik
+        // Marker Button Logik
         const trackBtnClass = isTracked 
             ? "bg-green-100 text-green-700 hover:bg-red-100 hover:text-red-700" 
             : "bg-indigo-50 text-indigo-600 hover:bg-indigo-100";
@@ -409,7 +409,7 @@ class CSDApp {
                 return;
             }
 
-            // Tracking "Jetzt da"
+            // Marker "Jetzt da"
             const trackBtn = e.target.closest('.track-btn');
             if (trackBtn) {
                 const id = trackBtn.getAttribute('data-id');
@@ -419,7 +419,7 @@ class CSDApp {
             }
         });
 
-        // Tracking Zurücksetzen Banner
+        // Markierungen zurücksetzen
         this.btnResetTrack.addEventListener('click', () => {
             if(confirm('Möchtest du die gesammelten Zeiten wirklich zurücksetzen?')) {
                 this.model.clearTracking();
@@ -433,7 +433,7 @@ class CSDApp {
         const showFavs = this.model.currentFilter === 'fav';
         const filteredData = this.model.filterData(query, showFavs);
         
-        // Wichtig: Die UI erhält den Zugriff auf das Model für ETA/Tracking Infos
+        // Wichtig: Die UI erhält den Zugriff auf das Model für ETA/Marker Infos
         this.ui.render(filteredData, this.model);
     }
 }
