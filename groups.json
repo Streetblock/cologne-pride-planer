@@ -1,0 +1,1954 @@
+[
+  {
+    "id": "1",
+    "num": "1",
+    "sub": "",
+    "name": "Cologne Pride E.V.",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 0
+  },
+  {
+    "id": "2",
+    "num": "2",
+    "sub": "",
+    "name": "Rainbow Sisters",
+    "type": "Fußgruppe",
+    "listIndex": 1
+  },
+  {
+    "id": "3",
+    "num": "3",
+    "sub": "",
+    "name": "Birkenapotheke",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 2
+  },
+  {
+    "id": "4",
+    "num": "4",
+    "sub": "",
+    "name": "Buntwerk - Netzwerk der LSBTI Mitarbeitenden der Kölner Stadtverwaltung",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 3
+  },
+  {
+    "id": "5",
+    "num": "5",
+    "sub": "",
+    "name": "rubicon e.V.",
+    "type": "Fußgruppe",
+    "listIndex": 4
+  },
+  {
+    "id": "6",
+    "num": "6",
+    "sub": "",
+    "name": "Landesverband der Hebammen NRW",
+    "type": "Fußgruppe",
+    "listIndex": 5
+  },
+  {
+    "id": "7",
+    "num": "7",
+    "sub": "",
+    "name": "SBK Sozial-Betriebe-Köln",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 6
+  },
+  {
+    "id": "8",
+    "num": "8",
+    "sub": "",
+    "name": "Proud Moms & Dads",
+    "type": "Fußgruppe",
+    "listIndex": 7
+  },
+  {
+    "id": "9",
+    "num": "9",
+    "sub": "",
+    "name": "Netzwerk Queer@Landesverwaltung.NRW",
+    "type": "Fußgruppe",
+    "listIndex": 8
+  },
+  {
+    "id": "10",
+    "num": "10",
+    "sub": "",
+    "name": "Vielfalt mit Herz im Kreis Heinsberg e.V.",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 9
+  },
+  {
+    "id": "11",
+    "num": "11",
+    "sub": "",
+    "name": "nordakkord2027",
+    "type": "Fußgruppe",
+    "listIndex": 10
+  },
+  {
+    "id": "12",
+    "num": "12",
+    "sub": "",
+    "name": "queerhandicap e. V.",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 11
+  },
+  {
+    "id": "13",
+    "num": "13",
+    "sub": "",
+    "name": "pro familia NRW & Friends",
+    "type": "Fußgruppe",
+    "listIndex": 12
+  },
+  {
+    "id": "14",
+    "num": "14",
+    "sub": "",
+    "name": "Stadt Düren",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 13
+  },
+  {
+    "id": "15",
+    "num": "15",
+    "sub": "",
+    "name": "komba gewerkschaft",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 14
+  },
+  {
+    "id": "16",
+    "num": "16",
+    "sub": "",
+    "name": "FTP Die Tunten - Freie Tunten Partei",
+    "type": "Fußgruppe",
+    "listIndex": 15
+  },
+  {
+    "id": "17",
+    "num": "17",
+    "sub": "",
+    "name": "Queere Studierendenschaft Köln",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 16
+  },
+  {
+    "id": "18",
+    "num": "18",
+    "sub": "",
+    "name": "Kölner Studierendenwerk",
+    "type": "Fußgruppe",
+    "listIndex": 17
+  },
+  {
+    "id": "19",
+    "num": "19",
+    "sub": "",
+    "name": "Hochschulen Kölns - Mitarbeitende",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 18
+  },
+  {
+    "id": "20",
+    "num": "20",
+    "sub": "",
+    "name": "proud@gesis",
+    "type": "Fußgruppe",
+    "listIndex": 19
+  },
+  {
+    "id": "21",
+    "num": "21",
+    "sub": "",
+    "name": "WDR",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 20
+  },
+  {
+    "id": "22A",
+    "num": "22",
+    "sub": "A",
+    "name": "BSW Bündnis Sahra Wagenknecht",
+    "type": "Fußgruppe",
+    "listIndex": 21
+  },
+  {
+    "id": "22B",
+    "num": "22",
+    "sub": "B",
+    "name": "Die Linke",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 22
+  },
+  {
+    "id": "22C",
+    "num": "22",
+    "sub": "C",
+    "name": "Die Linke Köln",
+    "type": "Fußgruppe",
+    "listIndex": 23
+  },
+  {
+    "id": "22D",
+    "num": "22",
+    "sub": "D",
+    "name": "Volt Köln",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 24
+  },
+  {
+    "id": "22E",
+    "num": "22",
+    "sub": "E",
+    "name": "Die PARTEI",
+    "type": "Fußgruppe",
+    "listIndex": 25
+  },
+  {
+    "id": "22F",
+    "num": "22",
+    "sub": "F",
+    "name": "BÜNDNIS 90/DIE GRÜNEN",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 26
+  },
+  {
+    "id": "22G",
+    "num": "22",
+    "sub": "G",
+    "name": "FDP und KSG",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 27
+  },
+  {
+    "id": "22H",
+    "num": "22",
+    "sub": "H",
+    "name": "SPDqueer Köln",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 28
+  },
+  {
+    "id": "22T",
+    "num": "22",
+    "sub": "T",
+    "name": "LSU Nordrhein-Westfalen",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 29
+  },
+  {
+    "id": "23",
+    "num": "23",
+    "sub": "",
+    "name": "K.G.Merheimer-Musketiere e. V.",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 30
+  },
+  {
+    "id": "24",
+    "num": "24",
+    "sub": "",
+    "name": "Netzwerk Vielfalt",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 31
+  },
+  {
+    "id": "25",
+    "num": "25",
+    "sub": "",
+    "name": "Vielfalt in der Feuerwehr Köln",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 32
+  },
+  {
+    "id": "26",
+    "num": "26",
+    "sub": "",
+    "name": "H7-Jugend NRW",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 33
+  },
+  {
+    "id": "27",
+    "num": "27",
+    "sub": "",
+    "name": "FORD",
+    "type": "Fußgruppe",
+    "listIndex": 34
+  },
+  {
+    "id": "28A",
+    "num": "28",
+    "sub": "A",
+    "name": "Deutsche Post und DHL",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 35
+  },
+  {
+    "id": "28B",
+    "num": "28",
+    "sub": "B",
+    "name": "Deutsche Post und DHL",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 36
+  },
+  {
+    "id": "28C",
+    "num": "28",
+    "sub": "C",
+    "name": "DHL",
+    "type": "Fußgruppe",
+    "listIndex": 37
+  },
+  {
+    "id": "29A",
+    "num": "29",
+    "sub": "A",
+    "name": "Deutsche Telekom - Magentapride",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 38
+  },
+  {
+    "id": "29B",
+    "num": "29",
+    "sub": "B",
+    "name": "Deutsche Telekom Magentapride",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 39
+  },
+  {
+    "id": "30",
+    "num": "30",
+    "sub": "",
+    "name": "Die Autobahn, Network Pride",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 40
+  },
+  {
+    "id": "31",
+    "num": "31",
+    "sub": "",
+    "name": "Queeramnesty NRW Köln",
+    "type": "Fußgruppe",
+    "listIndex": 41
+  },
+  {
+    "id": "32",
+    "num": "32",
+    "sub": "",
+    "name": "LSVD+ NRW, Verband Queere Vielfalt e.V.",
+    "type": "Fußgruppe",
+    "listIndex": 42
+  },
+  {
+    "id": "33A",
+    "num": "33",
+    "sub": "A",
+    "name": "Sparkasse KölnBonn",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 43
+  },
+  {
+    "id": "33B",
+    "num": "33",
+    "sub": "B",
+    "name": "Sparkasse KölnBonn (2. Wagen)",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 44
+  },
+  {
+    "id": "34",
+    "num": "34",
+    "sub": "",
+    "name": "Mishpacha Colonia",
+    "type": "Fußgruppe",
+    "listIndex": 45
+  },
+  {
+    "id": "35",
+    "num": "35",
+    "sub": "",
+    "name": "Vodafone",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 46
+  },
+  {
+    "id": "36",
+    "num": "36",
+    "sub": "",
+    "name": "REWE Group DITO",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 47
+  },
+  {
+    "id": "37A",
+    "num": "37",
+    "sub": "A",
+    "name": "AWO Kreisverband Köln e.V.",
+    "type": "Fußgruppe",
+    "listIndex": 48
+  },
+  {
+    "id": "37B",
+    "num": "37",
+    "sub": "B",
+    "name": "AWO Bezirksverband Mittelrhein e. V.",
+    "type": "Fußgruppe",
+    "listIndex": 49
+  },
+  {
+    "id": "38",
+    "num": "38",
+    "sub": "",
+    "name": "JTI",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 50
+  },
+  {
+    "id": "39",
+    "num": "39",
+    "sub": "",
+    "name": "ljgd e.V.",
+    "type": "Fußgruppe",
+    "listIndex": 51
+  },
+  {
+    "id": "40",
+    "num": "40",
+    "sub": "",
+    "name": "DAK Gesundheit",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 52
+  },
+  {
+    "id": "41",
+    "num": "41",
+    "sub": "",
+    "name": "Private Partyfreunde",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 53
+  },
+  {
+    "id": "42",
+    "num": "42",
+    "sub": "",
+    "name": "House of Love by Serviceplan",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 54
+  },
+  {
+    "id": "43A",
+    "num": "43",
+    "sub": "A",
+    "name": "Rollerskatecologne",
+    "type": "Fußgruppe",
+    "listIndex": 55
+  },
+  {
+    "id": "43B",
+    "num": "43",
+    "sub": "B",
+    "name": "Cologne Roller Derby",
+    "type": "Fußgruppe",
+    "listIndex": 56
+  },
+  {
+    "id": "44",
+    "num": "44",
+    "sub": "",
+    "name": "DEVK",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 57
+  },
+  {
+    "id": "45",
+    "num": "45",
+    "sub": "",
+    "name": "BLEND-Bayer Community für LGBTQ+",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 58
+  },
+  {
+    "id": "45",
+    "num": "45",
+    "sub": "",
+    "name": "BNP Paribas",
+    "type": "Fußgruppe",
+    "listIndex": 59
+  },
+  {
+    "id": "46",
+    "num": "46",
+    "sub": "",
+    "name": "LyondellBasell",
+    "type": "Fußgruppe",
+    "listIndex": 60
+  },
+  {
+    "id": "47",
+    "num": "47",
+    "sub": "",
+    "name": "TCS Qolors",
+    "type": "Fußgruppe",
+    "listIndex": 61
+  },
+  {
+    "id": "48",
+    "num": "48",
+    "sub": "",
+    "name": "1. FC Köln & Andersrum rut-wiess",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 62
+  },
+  {
+    "id": "49A",
+    "num": "49",
+    "sub": "A",
+    "name": "Dezernat Queer - Buntes Netzwerk der LVR-Mitarbeitenden",
+    "type": "Fußgruppe",
+    "listIndex": 63
+  },
+  {
+    "id": "49B",
+    "num": "49",
+    "sub": "B",
+    "name": "Beschäftigte in Werkstätten beim LVR",
+    "type": "Fußgruppe",
+    "listIndex": 64
+  },
+  {
+    "id": "50",
+    "num": "50",
+    "sub": "",
+    "name": "Tadaaa",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 65
+  },
+  {
+    "id": "51",
+    "num": "51",
+    "sub": "",
+    "name": "Computacenter AG&Co.oHG",
+    "type": "Fußgruppe",
+    "listIndex": 66
+  },
+  {
+    "id": "52",
+    "num": "52",
+    "sub": "",
+    "name": "expert HOFFMANN",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 67
+  },
+  {
+    "id": "53",
+    "num": "53",
+    "sub": "",
+    "name": "Aequaliris",
+    "type": "Fußgruppe",
+    "listIndex": 68
+  },
+  {
+    "id": "54",
+    "num": "54",
+    "sub": "",
+    "name": "Amazon",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 69
+  },
+  {
+    "id": "55",
+    "num": "55",
+    "sub": "",
+    "name": "PriDE@KPMG & Friends",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 70
+  },
+  {
+    "id": "56",
+    "num": "56",
+    "sub": "",
+    "name": "NTT DATA Business Solutions",
+    "type": "Fußgruppe",
+    "listIndex": 71
+  },
+  {
+    "id": "57",
+    "num": "57",
+    "sub": "",
+    "name": "Regionalverkehr Köln GmbH",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 72
+  },
+  {
+    "id": "58",
+    "num": "58",
+    "sub": "",
+    "name": "Mercedes-Benz PRIDE",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 73
+  },
+  {
+    "id": "59",
+    "num": "59",
+    "sub": "",
+    "name": "be.queer@RTL & Bertelsmann be.queer",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 74
+  },
+  {
+    "id": "60",
+    "num": "60",
+    "sub": "",
+    "name": "sipgate",
+    "type": "Fußgruppe",
+    "listIndex": 75
+  },
+  {
+    "id": "61",
+    "num": "61",
+    "sub": "",
+    "name": "TELUS Digital",
+    "type": "Fußgruppe",
+    "listIndex": 76
+  },
+  {
+    "id": "62",
+    "num": "62",
+    "sub": "",
+    "name": "Kölncampus",
+    "type": "Fußgruppe",
+    "listIndex": 77
+  },
+  {
+    "id": "63",
+    "num": "63",
+    "sub": "",
+    "name": "Vebego",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 78
+  },
+  {
+    "id": "64",
+    "num": "64",
+    "sub": "",
+    "name": "DE-CIX Diversity Network",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 79
+  },
+  {
+    "id": "65",
+    "num": "65",
+    "sub": "",
+    "name": "Bunter Haufen",
+    "type": "Fußgruppe",
+    "listIndex": 80
+  },
+  {
+    "id": "66",
+    "num": "66",
+    "sub": "",
+    "name": "MCC Köln-Kirche für/mit Vielfalt",
+    "type": "Fußgruppe",
+    "listIndex": 81
+  },
+  {
+    "id": "67",
+    "num": "67",
+    "sub": "",
+    "name": "SUXXEED- Sales for Love and Diversity!",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 82
+  },
+  {
+    "id": "68",
+    "num": "68",
+    "sub": "",
+    "name": "AUF ACHSE, Kinder-, Jugend- und soziale Hilfen",
+    "type": "Fußgruppe",
+    "listIndex": 83
+  },
+  {
+    "id": "69",
+    "num": "69",
+    "sub": "",
+    "name": "Eurowings | Diversifly",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 84
+  },
+  {
+    "id": "70",
+    "num": "70",
+    "sub": "",
+    "name": "Hyatt Regency Cologne Hypride",
+    "type": "Fußgruppe",
+    "listIndex": 85
+  },
+  {
+    "id": "71",
+    "num": "71",
+    "sub": "",
+    "name": "Perspektive Bildung e. V.",
+    "type": "Fußgruppe",
+    "listIndex": 86
+  },
+  {
+    "id": "72",
+    "num": "72",
+    "sub": "",
+    "name": "Selbsthilfe-Kontaktstelle Köln des Paritätischen Wohlfahrtsverbands NRW",
+    "type": "Fußgruppe",
+    "listIndex": 87
+  },
+  {
+    "id": "73",
+    "num": "73",
+    "sub": "",
+    "name": "BearWalk Cologne Pride for Bears and Friends",
+    "type": "Fußgruppe",
+    "listIndex": 88
+  },
+  {
+    "id": "74",
+    "num": "74",
+    "sub": "",
+    "name": "Alles Gute.Live",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 89
+  },
+  {
+    "id": "75",
+    "num": "75",
+    "sub": "",
+    "name": "Kenvue",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 90
+  },
+  {
+    "id": "76",
+    "num": "76",
+    "sub": "",
+    "name": "Papst",
+    "type": "Fußgruppe",
+    "listIndex": 91
+  },
+  {
+    "id": "77",
+    "num": "77",
+    "sub": "",
+    "name": "Netzwerk",
+    "type": "Fußgruppe",
+    "listIndex": 92
+  },
+  {
+    "id": "78",
+    "num": "78",
+    "sub": "",
+    "name": "MyDagis",
+    "type": "Fußgruppe",
+    "listIndex": 93
+  },
+  {
+    "id": "79",
+    "num": "79",
+    "sub": "",
+    "name": "Richard-Riemerschmid-Berufskolleg",
+    "type": "Fußgruppe",
+    "listIndex": 94
+  },
+  {
+    "id": "80",
+    "num": "80",
+    "sub": "",
+    "name": "SV SchillerGymnasium",
+    "type": "Fußgruppe",
+    "listIndex": 95
+  },
+  {
+    "id": "81",
+    "num": "81",
+    "sub": "",
+    "name": "Konrad-Adenauer-Gymnasium Langenfeld",
+    "type": "Fußgruppe",
+    "listIndex": 96
+  },
+  {
+    "id": "82",
+    "num": "82",
+    "sub": "",
+    "name": "Heinrich Böll Gesamtschule",
+    "type": "Fußgruppe",
+    "listIndex": 97
+  },
+  {
+    "id": "83",
+    "num": "83",
+    "sub": "",
+    "name": "Femmes Like You",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 98
+  },
+  {
+    "id": "84",
+    "num": "84",
+    "sub": "",
+    "name": "Omas gegen Rechts",
+    "type": "Fußgruppe",
+    "listIndex": 99
+  },
+  {
+    "id": "85",
+    "num": "85",
+    "sub": "",
+    "name": "Omas gegen Rechts Bergisch Gladbach",
+    "type": "Fußgruppe",
+    "listIndex": 100
+  },
+  {
+    "id": "86A",
+    "num": "86",
+    "sub": "A",
+    "name": "Gayphoria @ Nature One",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 101
+  },
+  {
+    "id": "86B",
+    "num": "86",
+    "sub": "B",
+    "name": "CSD Koblenz & Bunt56",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 102
+  },
+  {
+    "id": "87",
+    "num": "87",
+    "sub": "",
+    "name": "NARS",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 103
+  },
+  {
+    "id": "88",
+    "num": "88",
+    "sub": "",
+    "name": "anyway",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 104
+  },
+  {
+    "id": "89",
+    "num": "89",
+    "sub": "",
+    "name": "DJV Deutscher Journalistenverband",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 105
+  },
+  {
+    "id": "90",
+    "num": "90",
+    "sub": "",
+    "name": "Herzenslust NRW",
+    "type": "Fußgruppe",
+    "listIndex": 106
+  },
+  {
+    "id": "91",
+    "num": "91",
+    "sub": "",
+    "name": "POSITHIV HANDELN NRW",
+    "type": "Fußgruppe",
+    "listIndex": 107
+  },
+  {
+    "id": "92",
+    "num": "92",
+    "sub": "",
+    "name": "ABDL-Germany",
+    "type": "Fußgruppe",
+    "listIndex": 108
+  },
+  {
+    "id": "93",
+    "num": "93",
+    "sub": "",
+    "name": "Rheinfetisch & Friends",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 109
+  },
+  {
+    "id": "94",
+    "num": "94",
+    "sub": "",
+    "name": "Verein für schwule Subkultur eV",
+    "type": "Fußgruppe",
+    "listIndex": 110
+  },
+  {
+    "id": "95",
+    "num": "95",
+    "sub": "",
+    "name": "Aidshilfe Köln e.V.",
+    "type": "Fußgruppe",
+    "listIndex": 111
+  },
+  {
+    "id": "96",
+    "num": "96",
+    "sub": "",
+    "name": "Salesforce",
+    "type": "Fußgruppe",
+    "listIndex": 112
+  },
+  {
+    "id": "97",
+    "num": "97",
+    "sub": "",
+    "name": "Lukas Sieper Vice-Chair of LGBTIQ+ Intergroup",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 113
+  },
+  {
+    "id": "98",
+    "num": "98",
+    "sub": "",
+    "name": "Microsoft GLEAM & Friends",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 114
+  },
+  {
+    "id": "99",
+    "num": "99",
+    "sub": "",
+    "name": "Accenture x Avanade | Pride means more",
+    "type": "Fußgruppe",
+    "listIndex": 115
+  },
+  {
+    "id": "100A",
+    "num": "100",
+    "sub": "A",
+    "name": "AXA-#KnowYouCan... Be Yourself!",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 116
+  },
+  {
+    "id": "100B",
+    "num": "100",
+    "sub": "B",
+    "name": "AXA-#KnowYouCan...Be Yourself!",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 117
+  },
+  {
+    "id": "101",
+    "num": "101",
+    "sub": "",
+    "name": "We Proud",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 118
+  },
+  {
+    "id": "102",
+    "num": "102",
+    "sub": "",
+    "name": "Barmenia Gothaer",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 119
+  },
+  {
+    "id": "103",
+    "num": "103",
+    "sub": "",
+    "name": "Pride@HDI",
+    "type": "Fußgruppe",
+    "listIndex": 120
+  },
+  {
+    "id": "104A",
+    "num": "104",
+    "sub": "A",
+    "name": "Zurich Versicherung",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 121
+  },
+  {
+    "id": "104B",
+    "num": "104",
+    "sub": "B",
+    "name": "Zurich Versicherung",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 122
+  },
+  {
+    "id": "105",
+    "num": "105",
+    "sub": "",
+    "name": "pride@ergo",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 123
+  },
+  {
+    "id": "106",
+    "num": "106",
+    "sub": "",
+    "name": "Bunt wie der Regenbogen",
+    "type": "Fußgruppe",
+    "listIndex": 124
+  },
+  {
+    "id": "107",
+    "num": "107",
+    "sub": "",
+    "name": "DAV Köln",
+    "type": "Fußgruppe",
+    "listIndex": 125
+  },
+  {
+    "id": "108",
+    "num": "108",
+    "sub": "",
+    "name": "Johanniter-Unfall-Hilfe",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 126
+  },
+  {
+    "id": "109",
+    "num": "109",
+    "sub": "",
+    "name": "KfW Bankengruppe",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 127
+  },
+  {
+    "id": "110",
+    "num": "110",
+    "sub": "",
+    "name": "Kölsch/Grüngürtelrosen/Veedelperlen",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 128
+  },
+  {
+    "id": "111",
+    "num": "111",
+    "sub": "",
+    "name": "KG Ponyhof e. V.",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 129
+  },
+  {
+    "id": "112",
+    "num": "112",
+    "sub": "",
+    "name": "BWI/BwConsulting/BwFPS",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 130
+  },
+  {
+    "id": "113",
+    "num": "113",
+    "sub": "",
+    "name": "QueerBw",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 131
+  },
+  {
+    "id": "114",
+    "num": "114",
+    "sub": "",
+    "name": "Soaked in Soca e. V.",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 132
+  },
+  {
+    "id": "115",
+    "num": "115",
+    "sub": "",
+    "name": "OVHcloud Germany",
+    "type": "Fußgruppe",
+    "listIndex": 133
+  },
+  {
+    "id": "116",
+    "num": "116",
+    "sub": "",
+    "name": "StattGarde Colonia Ahoj e. V.",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 134
+  },
+  {
+    "id": "117",
+    "num": "117",
+    "sub": "",
+    "name": "Queer Flamingos",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 135
+  },
+  {
+    "id": "118",
+    "num": "118",
+    "sub": "",
+    "name": "#öffisbunt",
+    "type": "Fußgruppe",
+    "listIndex": 136
+  },
+  {
+    "id": "119",
+    "num": "119",
+    "sub": "",
+    "name": "Queer im BAFZA",
+    "type": "Fußgruppe",
+    "listIndex": 137
+  },
+  {
+    "id": "120",
+    "num": "120",
+    "sub": "",
+    "name": "Freies Russland NRW e.V.",
+    "type": "Fußgruppe",
+    "listIndex": 138
+  },
+  {
+    "id": "121",
+    "num": "121",
+    "sub": "",
+    "name": "AKHD Köln",
+    "type": "Fußgruppe",
+    "listIndex": 139
+  },
+  {
+    "id": "122",
+    "num": "122",
+    "sub": "",
+    "name": "Los Brillantos Cologne",
+    "type": "Fußgruppe",
+    "listIndex": 140
+  },
+  {
+    "id": "123",
+    "num": "123",
+    "sub": "",
+    "name": "adesso SE Köln",
+    "type": "Fußgruppe",
+    "listIndex": 141
+  },
+  {
+    "id": "124",
+    "num": "124",
+    "sub": "",
+    "name": "Bootshaus Cologne",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 142
+  },
+  {
+    "id": "125",
+    "num": "125",
+    "sub": "",
+    "name": "DGB Jugend & friends",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 143
+  },
+  {
+    "id": "126",
+    "num": "126",
+    "sub": "",
+    "name": "Queere Lehrkräfte der GEW NRW",
+    "type": "Fußgruppe",
+    "listIndex": 144
+  },
+  {
+    "id": "127",
+    "num": "127",
+    "sub": "",
+    "name": "IG BAU QUEER",
+    "type": "Fußgruppe",
+    "listIndex": 145
+  },
+  {
+    "id": "128",
+    "num": "128",
+    "sub": "",
+    "name": "CAT BALLOU",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 146
+  },
+  {
+    "id": "129",
+    "num": "129",
+    "sub": "",
+    "name": "Bunt und Queer",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 147
+  },
+  {
+    "id": "130",
+    "num": "130",
+    "sub": "",
+    "name": "Allianz",
+    "type": "Fußgruppe",
+    "listIndex": 148
+  },
+  {
+    "id": "131",
+    "num": "131",
+    "sub": "",
+    "name": "Meine Liebe Besser Versichert @ Canada Life Europe",
+    "type": "Fußgruppe",
+    "listIndex": 149
+  },
+  {
+    "id": "132",
+    "num": "132",
+    "sub": "",
+    "name": "DFG-VK Deutsche Friedensgesellschaft",
+    "type": "Fußgruppe",
+    "listIndex": 150
+  },
+  {
+    "id": "133",
+    "num": "133",
+    "sub": "",
+    "name": "Polyamorie Stammtische Köln & NRW",
+    "type": "Fußgruppe",
+    "listIndex": 151
+  },
+  {
+    "id": "134",
+    "num": "134",
+    "sub": "",
+    "name": "congstar",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 152
+  },
+  {
+    "id": "135",
+    "num": "135",
+    "sub": "",
+    "name": "Covestro",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 153
+  },
+  {
+    "id": "136",
+    "num": "136",
+    "sub": "",
+    "name": "CRFE goes CSD",
+    "type": "Fußgruppe",
+    "listIndex": 154
+  },
+  {
+    "id": "137",
+    "num": "137",
+    "sub": "",
+    "name": "CSD Erfurt",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 155
+  },
+  {
+    "id": "138",
+    "num": "138",
+    "sub": "",
+    "name": "db Pride das queere Mitarbeitenden-Netzwerk der Deutschen Bank",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 156
+  },
+  {
+    "id": "139",
+    "num": "139",
+    "sub": "",
+    "name": "de. Perspektive e.V",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 157
+  },
+  {
+    "id": "140",
+    "num": "140",
+    "sub": "",
+    "name": "Queer Sports United",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 158
+  },
+  {
+    "id": "141",
+    "num": "141",
+    "sub": "",
+    "name": "Die Bräute",
+    "type": "Fußgruppe",
+    "listIndex": 159
+  },
+  {
+    "id": "142",
+    "num": "142",
+    "sub": "",
+    "name": "Drag Artists NRW",
+    "type": "Fußgruppe",
+    "listIndex": 160
+  },
+  {
+    "id": "143",
+    "num": "143",
+    "sub": "",
+    "name": "Drees&Sommer SE",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 161
+  },
+  {
+    "id": "144",
+    "num": "144",
+    "sub": "",
+    "name": "Eathappy",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 162
+  },
+  {
+    "id": "145",
+    "num": "145",
+    "sub": "",
+    "name": "Erasmus Student Network Köln e. V.",
+    "type": "Fußgruppe",
+    "listIndex": 163
+  },
+  {
+    "id": "146",
+    "num": "146",
+    "sub": "",
+    "name": "Empathic Leon",
+    "type": "Fußgruppe",
+    "listIndex": 164
+  },
+  {
+    "id": "147",
+    "num": "147",
+    "sub": "",
+    "name": "EbenDrum",
+    "type": "Fußgruppe",
+    "listIndex": 165
+  },
+  {
+    "id": "148",
+    "num": "148",
+    "sub": "",
+    "name": "Ev. Kirche und Diakonie",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 166
+  },
+  {
+    "id": "149",
+    "num": "149",
+    "sub": "",
+    "name": "Farbenspiel e. V.",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 167
+  },
+  {
+    "id": "150",
+    "num": "150",
+    "sub": "",
+    "name": "Buntes Handwerk eV..",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 168
+  },
+  {
+    "id": "151",
+    "num": "151",
+    "sub": "",
+    "name": "Femboyverein n.e.V.",
+    "type": "Fußgruppe",
+    "listIndex": 169
+  },
+  {
+    "id": "152",
+    "num": "152",
+    "sub": "",
+    "name": "Garde der Garstigen",
+    "type": "Fußgruppe",
+    "listIndex": 170
+  },
+  {
+    "id": "153",
+    "num": "153",
+    "sub": "",
+    "name": "GI-Support gor LGBTIQ+",
+    "type": "Fußgruppe",
+    "listIndex": 171
+  },
+  {
+    "id": "154",
+    "num": "154",
+    "sub": "",
+    "name": "GlämmerSchnitten",
+    "type": "Fußgruppe",
+    "listIndex": 172
+  },
+  {
+    "id": "155",
+    "num": "155",
+    "sub": "",
+    "name": "Glitzer gegen Grau",
+    "type": "Fußgruppe",
+    "listIndex": 173
+  },
+  {
+    "id": "156",
+    "num": "156",
+    "sub": "",
+    "name": "global queer engagiert.",
+    "type": "Fußgruppe",
+    "listIndex": 174
+  },
+  {
+    "id": "157",
+    "num": "157",
+    "sub": "",
+    "name": "GOT BAG GmbH",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 175
+  },
+  {
+    "id": "158",
+    "num": "158",
+    "sub": "",
+    "name": "got2b Proud",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 176
+  },
+  {
+    "id": "159",
+    "num": "159",
+    "sub": "",
+    "name": "Graf-Recke-Stiftung",
+    "type": "Fußgruppe",
+    "listIndex": 177
+  },
+  {
+    "id": "160",
+    "num": "160",
+    "sub": "",
+    "name": "Greenpeace Köln",
+    "type": "Fußgruppe",
+    "listIndex": 178
+  },
+  {
+    "id": "161",
+    "num": "161",
+    "sub": "",
+    "name": "H&M Deutschland",
+    "type": "Fußgruppe",
+    "listIndex": 179
+  },
+  {
+    "id": "162",
+    "num": "162",
+    "sub": "",
+    "name": "HBO Max",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 180
+  },
+  {
+    "id": "163",
+    "num": "163",
+    "sub": "",
+    "name": "Henkel AG & Co. KGaA",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 181
+  },
+  {
+    "id": "164",
+    "num": "164",
+    "sub": "",
+    "name": "IKEA",
+    "type": "Fußgruppe",
+    "listIndex": 182
+  },
+  {
+    "id": "165",
+    "num": "165",
+    "sub": "",
+    "name": "Internationale Gartenausstellung (IGA) 2027",
+    "type": "Fußgruppe",
+    "listIndex": 183
+  },
+  {
+    "id": "166",
+    "num": "166",
+    "sub": "",
+    "name": "ISS Facility Services Deutschland GmbH",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 184
+  },
+  {
+    "id": "167",
+    "num": "167",
+    "sub": "",
+    "name": "Jot Jelunge VIELFALT L(I)EBEN",
+    "type": "Fußgruppe",
+    "listIndex": 185
+  },
+  {
+    "id": "168",
+    "num": "168",
+    "sub": "",
+    "name": "Jugendhaus Sürth",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 186
+  },
+  {
+    "id": "169",
+    "num": "169",
+    "sub": "",
+    "name": "Jugendverbände des BDKJ und OutinChurch",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 187
+  },
+  {
+    "id": "170",
+    "num": "170",
+    "sub": "",
+    "name": "TK Maxx",
+    "type": "Fußgruppe",
+    "listIndex": 188
+  },
+  {
+    "id": "171",
+    "num": "171",
+    "sub": "",
+    "name": "Just married",
+    "type": "Fußgruppe",
+    "listIndex": 189
+  },
+  {
+    "id": "172",
+    "num": "172",
+    "sub": "",
+    "name": "Kearney",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 190
+  },
+  {
+    "id": "173",
+    "num": "173",
+    "sub": "",
+    "name": "Kick like a Woman",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 191
+  },
+  {
+    "id": "174",
+    "num": "174",
+    "sub": "",
+    "name": "Köln Arcaden",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 192
+  },
+  {
+    "id": "175",
+    "num": "175",
+    "sub": "",
+    "name": "Kölnchella",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 193
+  },
+  {
+    "id": "176",
+    "num": "176",
+    "sub": "",
+    "name": "Köln-Kolleg",
+    "type": "Fußgruppe",
+    "listIndex": 194
+  },
+  {
+    "id": "177",
+    "num": "177",
+    "sub": "",
+    "name": "RIMOWA GmbH",
+    "type": "Fußgruppe",
+    "listIndex": 195
+  },
+  {
+    "id": "178",
+    "num": "178",
+    "sub": "",
+    "name": "KONTRAST KONTUR Jugendhilfe",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 196
+  },
+  {
+    "id": "179",
+    "num": "179",
+    "sub": "",
+    "name": "Kreissparkasse Köln",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 197
+  },
+  {
+    "id": "180",
+    "num": "180",
+    "sub": "",
+    "name": "Löka Verkehrsabsicherungs GmbH",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 198
+  },
+  {
+    "id": "181",
+    "num": "181",
+    "sub": "",
+    "name": "LOREAL",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 199
+  },
+  {
+    "id": "182",
+    "num": "182",
+    "sub": "",
+    "name": "Love",
+    "type": "Fußgruppe",
+    "listIndex": 200
+  },
+  {
+    "id": "183",
+    "num": "183",
+    "sub": "",
+    "name": "MCKinsey",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 201
+  },
+  {
+    "id": "184",
+    "num": "184",
+    "sub": "",
+    "name": "Netlight",
+    "type": "Fußgruppe",
+    "listIndex": 202
+  },
+  {
+    "id": "185",
+    "num": "185",
+    "sub": "",
+    "name": "NEXT Leuchtfeuer",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 203
+  },
+  {
+    "id": "186",
+    "num": "186",
+    "sub": "",
+    "name": "NYX",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 204
+  },
+  {
+    "id": "187",
+    "num": "187",
+    "sub": "",
+    "name": "OUTfront",
+    "type": "Fußgruppe",
+    "listIndex": 205
+  },
+  {
+    "id": "188",
+    "num": "188",
+    "sub": "",
+    "name": "Pernod Ricard",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 206
+  },
+  {
+    "id": "189",
+    "num": "189",
+    "sub": "",
+    "name": "Pixum",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 207
+  },
+  {
+    "id": "190",
+    "num": "190",
+    "sub": "",
+    "name": "MSD",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 208
+  },
+  {
+    "id": "191",
+    "num": "191",
+    "sub": "",
+    "name": "Pride@Condor",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 209
+  },
+  {
+    "id": "192",
+    "num": "192",
+    "sub": "",
+    "name": "Queer Connect Sauerland by. Luca Valentino",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 210
+  },
+  {
+    "id": "193",
+    "num": "193",
+    "sub": "",
+    "name": "Zauberwelt",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 211
+  },
+  {
+    "id": "194",
+    "num": "194",
+    "sub": "",
+    "name": "Konglomerat Drumline",
+    "type": "Fußgruppe",
+    "listIndex": 212
+  },
+  {
+    "id": "195",
+    "num": "195",
+    "sub": "",
+    "name": "Queerowy Klub",
+    "type": "Fußgruppe",
+    "listIndex": 213
+  },
+  {
+    "id": "196",
+    "num": "196",
+    "sub": "",
+    "name": "railbow",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 214
+  },
+  {
+    "id": "197",
+    "num": "197",
+    "sub": "",
+    "name": "Schnocken",
+    "type": "Fußgruppe",
+    "listIndex": 215
+  },
+  {
+    "id": "198",
+    "num": "198",
+    "sub": "",
+    "name": "Sheraton Essen Hotel",
+    "type": "Fußgruppe",
+    "listIndex": 216
+  },
+  {
+    "id": "199",
+    "num": "199",
+    "sub": "",
+    "name": "Showgirls Frankfurt",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 217
+  },
+  {
+    "id": "200",
+    "num": "200",
+    "sub": "",
+    "name": "outback stiftung",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 218
+  },
+  {
+    "id": "201",
+    "num": "201",
+    "sub": "",
+    "name": "SkF, InVia, SKM und Caritas",
+    "type": "Fußgruppe",
+    "listIndex": 219
+  },
+  {
+    "id": "202",
+    "num": "202",
+    "sub": "",
+    "name": "SNOCKS",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 220
+  },
+  {
+    "id": "203",
+    "num": "203",
+    "sub": "",
+    "name": "Democrats Abroad Germany",
+    "type": "Fußgruppe",
+    "listIndex": 221
+  },
+  {
+    "id": "204",
+    "num": "204",
+    "sub": "",
+    "name": "The Boston Consulting Group",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 222
+  },
+  {
+    "id": "205",
+    "num": "205",
+    "sub": "",
+    "name": "Powering Pride / Next Kraftwerke",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 223
+  },
+  {
+    "id": "206",
+    "num": "206",
+    "sub": "",
+    "name": "Thyssenkrupp",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 224
+  },
+  {
+    "id": "207",
+    "num": "207",
+    "sub": "",
+    "name": "Flasche leer, gib sie her...",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 225
+  },
+  {
+    "id": "208",
+    "num": "208",
+    "sub": "",
+    "name": "Universitätsklinikum Köln AOR",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 226
+  },
+  {
+    "id": "209",
+    "num": "209",
+    "sub": "",
+    "name": "AI FITNESS",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 227
+  },
+  {
+    "id": "210",
+    "num": "210",
+    "sub": "",
+    "name": "WAIZPARISWORK - Freedom of Art -",
+    "type": "Fußgruppe",
+    "listIndex": 228
+  },
+  {
+    "id": "211",
+    "num": "211",
+    "sub": "",
+    "name": "Rhein Energie",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 229
+  },
+  {
+    "id": "212",
+    "num": "212",
+    "sub": "",
+    "name": "netcologne",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 230
+  },
+  {
+    "id": "213",
+    "num": "213",
+    "sub": "",
+    "name": "LGBT+ Netzwerk Rhein-Ruhr",
+    "type": "Fußgruppe",
+    "listIndex": 231
+  },
+  {
+    "id": "214",
+    "num": "214",
+    "sub": "",
+    "name": "Yello & Friends",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 232
+  },
+  {
+    "id": "215",
+    "num": "215",
+    "sub": "",
+    "name": "Youth for Climate",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 233
+  },
+  {
+    "id": "216",
+    "num": "216",
+    "sub": "",
+    "name": "JusticeForPedro",
+    "type": "Fußgruppe",
+    "listIndex": 234
+  },
+  {
+    "id": "217",
+    "num": "217",
+    "sub": "",
+    "name": "Gymnasium Thusneldastraße Köln Deutz",
+    "type": "Fußgruppe",
+    "listIndex": 235
+  },
+  {
+    "id": "218",
+    "num": "218",
+    "sub": "",
+    "name": "ZusammenBunt",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 236
+  },
+  {
+    "id": "219",
+    "num": "219",
+    "sub": "",
+    "name": "Gaypeace 69 by Stefan Meler",
+    "type": "Fußgruppe",
+    "listIndex": 237
+  },
+  {
+    "id": "220",
+    "num": "220",
+    "sub": "",
+    "name": "Arcadis Pride",
+    "type": "Fußgruppe",
+    "listIndex": 238
+  },
+  {
+    "id": "221",
+    "num": "221",
+    "sub": "",
+    "name": "Read queer books",
+    "type": "Fußgruppe",
+    "listIndex": 239
+  },
+  {
+    "id": "223",
+    "num": "223",
+    "sub": "",
+    "name": "BSV Köln",
+    "type": "Fußgruppe",
+    "listIndex": 240
+  },
+  {
+    "id": "224",
+    "num": "224",
+    "sub": "",
+    "name": "RSV Cologne Crushers",
+    "type": "Fußgruppe",
+    "listIndex": 241
+  },
+  {
+    "id": "225",
+    "num": "225",
+    "sub": "",
+    "name": "DEUTZ AG",
+    "type": "Fußgruppe",
+    "listIndex": 242
+  },
+  {
+    "id": "4711",
+    "num": "4711",
+    "sub": "",
+    "name": "AWB FläschBäck",
+    "type": "Fußgruppe und KFZ",
+    "listIndex": 243
+  }
+]

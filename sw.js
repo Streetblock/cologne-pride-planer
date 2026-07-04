@@ -1,7 +1,10 @@
-const CACHE_NAME = 'pride-tracker-v1';
+const CACHE_NAME = 'pride-tracker-v2';
 const APP_SHELL = [
   './',
   './index.html',
+  './style.css',
+  './app.js',
+  './groups.json',
   './manifest.webmanifest',
   './icon-192.png',
   './icon-512.png',
