@@ -14,6 +14,7 @@ Repository: `streetblock/cologne-pride-planer`
 - ETA-Prognose aus den gesetzten Markern berechnen
 - Gruppen, Favoriten und Standort-Zeiten als JSON exportieren
 - Gruppen, Favoriten und exportierte Standort-Zeiten wieder importieren
+- Installationshilfe ueber `Daten -> Installieren`
 - Als Progressive Web App installierbar, wenn sie ueber `https://` oder `localhost` ausgeliefert wird
 - App-Shell und Gruppendaten per Service Worker cachen
 

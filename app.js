@@ -584,6 +584,7 @@ class CSDApp {
         this.dataPanel = document.getElementById('dataPanel');
         this.btnExportState = document.getElementById('btnExportState');
         this.btnImportData = document.getElementById('btnImportData');
+        this.btnInstallApp = document.getElementById('btnInstallApp');
         this.importFileInput = document.getElementById('importFileInput');
         this.btnResetCurrent = document.getElementById('btnResetCurrent');
         this.btnResetTimes = document.getElementById('btnResetTimes');
@@ -594,11 +595,13 @@ class CSDApp {
         this.confirmMessage = document.getElementById('confirmMessage');
         this.confirmCancel = document.getElementById('confirmCancel');
         this.confirmAccept = document.getElementById('confirmAccept');
+        this.deferredInstallPrompt = null;
 
         this.init();
     }
 
     init() {
+        this.bindInstallPrompt();
         this.bindEvents();
         this.updateView();
         
@@ -655,6 +658,10 @@ class CSDApp {
         this.btnImportData.addEventListener('click', () => {
             this.importFileInput.value = '';
             this.importFileInput.click();
+        });
+
+        this.btnInstallApp.addEventListener('click', () => {
+            this.installApp();
         });
 
         this.importFileInput.addEventListener('change', () => {
@@ -723,6 +730,67 @@ class CSDApp {
         });
     }
 
+    bindInstallPrompt() {
+        window.addEventListener('beforeinstallprompt', (event) => {
+            event.preventDefault();
+            this.deferredInstallPrompt = event;
+            this.btnInstallApp.textContent = 'App installieren';
+            this.btnInstallApp.classList.remove('text-gray-700');
+            this.btnInstallApp.classList.add('text-indigo-700');
+        });
+
+        window.addEventListener('appinstalled', () => {
+            this.deferredInstallPrompt = null;
+            this.btnInstallApp.textContent = 'Installiert';
+            this.btnInstallApp.disabled = true;
+            this.btnInstallApp.classList.add('opacity-60');
+        });
+    }
+
+    isStandalone() {
+        return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+    }
+
+    async installApp() {
+        if (this.isStandalone()) {
+            await this.confirmAction({
+                title: 'App ist installiert',
+                message: 'Cologne Pride Planer läuft bereits im App-Modus.',
+                confirmText: 'Ok',
+                variant: 'info'
+            });
+            return;
+        }
+
+        if (this.deferredInstallPrompt) {
+            const promptEvent = this.deferredInstallPrompt;
+            this.deferredInstallPrompt = null;
+            await promptEvent.prompt();
+            const choice = await promptEvent.userChoice;
+
+            if (choice.outcome === 'accepted') {
+                this.btnInstallApp.textContent = 'Installiert';
+                this.btnInstallApp.disabled = true;
+                this.btnInstallApp.classList.add('opacity-60');
+            } else {
+                this.btnInstallApp.textContent = 'Installieren';
+            }
+            return;
+        }
+
+        const isIos = /iphone|ipad|ipod/i.test(navigator.userAgent);
+        const message = isIos
+            ? 'In Safari über Teilen und dann "Zum Home-Bildschirm" installieren.'
+            : 'Falls kein Install-Dialog erscheint: Browser-Menü öffnen und "App installieren" oder "Zum Startbildschirm hinzufügen" wählen. Nach dem ersten Laden hilft oft ein Reload.';
+
+        await this.confirmAction({
+            title: 'App installieren',
+            message,
+            confirmText: 'Verstanden',
+            variant: 'info'
+        });
+    }
+
     async confirmResetCurrentLocation() {
         const session = this.model.getActiveSession();
         const ok = await this.confirmAction({
@@ -736,11 +804,14 @@ class CSDApp {
         this.updateView();
     }
 
-    confirmAction({ title, message, confirmText }) {
+    confirmAction({ title, message, confirmText, variant = 'danger' }) {
         return new Promise(resolve => {
             this.confirmTitle.textContent = title;
             this.confirmMessage.textContent = message;
             this.confirmAccept.textContent = confirmText || 'Bestätigen';
+            this.confirmAccept.className = variant === 'info'
+                ? 'rounded-lg bg-indigo-600 px-3 py-2 text-sm font-bold text-white hover:bg-indigo-700'
+                : 'rounded-lg bg-red-600 px-3 py-2 text-sm font-bold text-white hover:bg-red-700';
             this.confirmModal.classList.remove('hidden');
             this.confirmModal.classList.add('flex');
 

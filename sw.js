@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cologne-pride-planer-v2';
+const CACHE_NAME = 'cologne-pride-planer-v3';
 const APP_SHELL = [
   './',
   './index.html',
