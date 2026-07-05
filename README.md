@@ -9,12 +9,21 @@ Repository: `streetblock/cologne-pride-planer`
 - Startreihenfolge mit 244 Gruppen anzeigen
 - Suche nach Name, Nummer oder ID
 - Favoriten lokal im Browser speichern
-- "Jetzt da"-Marker lokal im Browser speichern
+- mehrere Standorte/Mess-Sessions verwalten
+- "Jetzt da"-Marker pro Standort lokal im Browser speichern
 - ETA-Prognose aus den gesetzten Markern berechnen
+- Gruppen, Favoriten und Standort-Zeiten als JSON exportieren
+- Gruppen, Favoriten und exportierte Standort-Zeiten wieder importieren
 - Als Progressive Web App installierbar, wenn sie ueber `https://` oder `localhost` ausgeliefert wird
 - App-Shell und Gruppendaten per Service Worker cachen
 
 Die App hat bewusst kein Backend und keine echten Live-Standortdaten. Alle Markierungen entstehen lokal auf dem eigenen Geraet.
+
+## Daten sichern und wechseln
+
+Die App speichert Favoriten, importierte Gruppen und Standort-Zeiten im Browser-Storage. Ueber `Daten -> Export` kann der aktuelle Stand als JSON gesichert werden. Der Import akzeptiert entweder einen kompletten Export oder eine Gruppenliste als JSON-Array.
+
+Wenn du an eine andere Stelle der Paradestrecke wechselst, lege ueber `Neu` einen neuen Standort an. Die alten Zeiten bleiben im vorherigen Standort erhalten und koennen spaeter exportiert oder ausgewertet werden.
 
 ## Lokal starten
 

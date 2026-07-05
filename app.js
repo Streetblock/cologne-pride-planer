@@ -4,10 +4,117 @@
  */
 class ParadeModel {
     constructor(data) {
-        this.items = data;
-        this.favorites = JSON.parse(localStorage.getItem('csd_favorites_2026')) || [];
-        this.tracking = JSON.parse(localStorage.getItem('csd_tracking_2026')) || {};
+        this.defaultItems = this.normalizeGroups(data);
+        this.items = this.loadGroups();
+        this.favorites = this.loadJson('csd_favorites_2026', []);
+        this.sessions = this.loadSessions();
+        this.activeSessionId = localStorage.getItem('csd_active_location_2026') || this.sessions[0].id;
+        if (!this.getActiveSession()) this.activeSessionId = this.sessions[0].id;
         this.currentFilter = 'all'; // 'all' oder 'fav'
+        this.saveSessions();
+        this.saveActiveSession();
+    }
+
+    loadJson(key, fallback) {
+        try {
+            const value = localStorage.getItem(key);
+            return value ? JSON.parse(value) : fallback;
+        } catch (error) {
+            console.warn(`Lokale Daten konnten nicht gelesen werden: ${key}`, error);
+            return fallback;
+        }
+    }
+
+    normalizeGroups(groups) {
+        if (!Array.isArray(groups)) return [];
+
+        return groups.map((item, index) => {
+            const num = String(item.num ?? item.number ?? item.id ?? "").trim();
+            const sub = String(item.sub ?? "").trim();
+            const id = String(item.id ?? `${num}${sub}`).trim();
+
+            return {
+                id: id || `${num}${sub}`,
+                num: num,
+                sub: sub,
+                name: String(item.name ?? "").replace(/\"/g, "").trim(),
+                type: String(item.type ?? "").replace(/\"/g, "").trim(),
+                listIndex: index
+            };
+        }).filter(item => item.id && item.name);
+    }
+
+    loadGroups() {
+        const storedGroups = this.loadJson('csd_groups_2026', null);
+        const normalized = this.normalizeGroups(storedGroups);
+        return normalized.length > 0 ? normalized : this.defaultItems;
+    }
+
+    saveGroups() {
+        localStorage.setItem('csd_groups_2026', JSON.stringify(this.items));
+    }
+
+    createSession(name, tracking = {}) {
+        const now = Date.now();
+        return {
+            id: `loc_${now}_${Math.random().toString(36).slice(2, 8)}`,
+            name: String(name || "Standort").trim() || "Standort",
+            createdAt: now,
+            updatedAt: now,
+            tracking: { ...tracking }
+        };
+    }
+
+    normalizeSessions(sessions) {
+        if (!Array.isArray(sessions)) return [];
+
+        return sessions.map((session, index) => ({
+            id: String(session.id || `loc_import_${index}_${Date.now()}`),
+            name: String(session.name || `Standort ${index + 1}`).trim() || `Standort ${index + 1}`,
+            createdAt: Number(session.createdAt) || Date.now(),
+            updatedAt: Number(session.updatedAt) || Date.now(),
+            tracking: session.tracking && typeof session.tracking === 'object' ? { ...session.tracking } : {}
+        }));
+    }
+
+    loadSessions() {
+        const storedSessions = this.normalizeSessions(this.loadJson('csd_location_sessions_2026', null));
+        if (storedSessions.length > 0) return storedSessions;
+
+        const legacyTracking = this.loadJson('csd_tracking_2026', {});
+        const hasLegacyTracking = legacyTracking && typeof legacyTracking === 'object' && Object.keys(legacyTracking).length > 0;
+        return [this.createSession(hasLegacyTracking ? "Standort 1 (importiert)" : "Standort 1", hasLegacyTracking ? legacyTracking : {})];
+    }
+
+    getActiveSession() {
+        return this.sessions.find(session => session.id === this.activeSessionId) || this.sessions[0];
+    }
+
+    get tracking() {
+        return this.getActiveSession()?.tracking || {};
+    }
+
+    saveSessions() {
+        localStorage.setItem('csd_location_sessions_2026', JSON.stringify(this.sessions));
+    }
+
+    saveActiveSession() {
+        localStorage.setItem('csd_active_location_2026', this.activeSessionId);
+    }
+
+    setActiveSession(id) {
+        if (!this.sessions.some(session => session.id === id)) return;
+        this.activeSessionId = id;
+        this.saveActiveSession();
+    }
+
+    addLocation(name) {
+        const session = this.createSession(name || `Standort ${this.sessions.length + 1}`);
+        this.sessions.push(session);
+        this.activeSessionId = session.id;
+        this.saveSessions();
+        this.saveActiveSession();
+        return session;
     }
 
     // Favoriten
@@ -31,21 +138,112 @@ class ParadeModel {
 
     // Lokale Markierungen
     toggleTracking(id) {
-        if (this.tracking[id]) {
-            delete this.tracking[id];
+        const session = this.getActiveSession();
+        if (session.tracking[id]) {
+            delete session.tracking[id];
         } else {
-            this.tracking[id] = Date.now();
+            session.tracking[id] = Date.now();
         }
+        session.updatedAt = Date.now();
         this.saveTracking();
     }
     
     clearTracking() {
-        this.tracking = {};
+        const session = this.getActiveSession();
+        session.tracking = {};
+        session.updatedAt = Date.now();
         this.saveTracking();
     }
 
+    clearAllTracking() {
+        this.sessions.forEach(session => {
+            session.tracking = {};
+            session.updatedAt = Date.now();
+        });
+        this.saveSessions();
+    }
+
+    clearFavorites() {
+        this.favorites = [];
+        this.saveFavorites();
+    }
+
+    resetGroups() {
+        this.items = this.defaultItems;
+        localStorage.removeItem('csd_groups_2026');
+    }
+
     saveTracking() {
-        localStorage.setItem('csd_tracking_2026', JSON.stringify(this.tracking));
+        this.saveSessions();
+    }
+
+    exportState() {
+        return {
+            schemaVersion: 1,
+            app: "cologne-pride-planer",
+            exportedAt: new Date().toISOString(),
+            groups: this.items,
+            favorites: this.favorites,
+            activeLocationId: this.activeSessionId,
+            locations: this.sessions
+        };
+    }
+
+    importData(payload) {
+        const changes = [];
+
+        if (Array.isArray(payload)) {
+            const groups = this.normalizeGroups(payload);
+            if (groups.length === 0) throw new Error("Die Gruppendatei enthält keine gültigen Gruppen.");
+            this.items = groups;
+            this.saveGroups();
+            changes.push("Gruppen");
+            return changes;
+        }
+
+        if (!payload || typeof payload !== 'object') {
+            throw new Error("Die Importdatei ist kein gültiges JSON-Objekt.");
+        }
+
+        if (Array.isArray(payload.groups)) {
+            const groups = this.normalizeGroups(payload.groups);
+            if (groups.length === 0) throw new Error("Die Gruppendatei enthält keine gültigen Gruppen.");
+            this.items = groups;
+            this.saveGroups();
+            changes.push("Gruppen");
+        }
+
+        if (Array.isArray(payload.favorites)) {
+            this.favorites = [...new Set(payload.favorites.map(id => String(id)))];
+            this.saveFavorites();
+            changes.push("Favoriten");
+        }
+
+        if (Array.isArray(payload.locations)) {
+            const sessions = this.normalizeSessions(payload.locations);
+            if (sessions.length > 0) {
+                this.sessions = sessions;
+                this.activeSessionId = sessions.some(session => session.id === payload.activeLocationId)
+                    ? payload.activeLocationId
+                    : sessions[0].id;
+                this.saveSessions();
+                this.saveActiveSession();
+                changes.push("Standorte");
+            }
+        } else if (payload.tracking && typeof payload.tracking === 'object') {
+            const session = this.createSession(payload.name || "Importierter Standort", payload.tracking);
+            this.sessions.push(session);
+            this.activeSessionId = session.id;
+            this.saveSessions();
+            this.saveActiveSession();
+            changes.push("Zeiten");
+        }
+
+        if (changes.length === 0) {
+            throw new Error("Die Importdatei enthält keine Gruppen, Favoriten oder Standorte.");
+        }
+
+        return changes;
     }
 
     // Prognose / Stats berechnen
@@ -192,11 +390,13 @@ class UIController {
         this.trackingBanner = document.getElementById('trackingBanner');
         this.trackingText = document.getElementById('trackingText');
         this.btnResetTrack = document.getElementById('btnResetTrack');
+        this.locationSelect = document.getElementById('locationSelect');
     }
 
     render(data, model) {
         this.listContainer.innerHTML = '';
         this.counterEl.innerText = `${data.length} Gruppen`;
+        this.renderLocations(model);
 
         // Tracking Statistiken holen
         const stats = model.getTrackingStats();
@@ -226,6 +426,23 @@ class UIController {
             
             this.listContainer.appendChild(fragment);
         }
+    }
+
+    renderLocations(model) {
+        if (!this.locationSelect) return;
+
+        const currentValue = this.locationSelect.value;
+        this.locationSelect.innerHTML = '';
+
+        model.sessions.forEach(session => {
+            const option = document.createElement('option');
+            const count = Object.keys(session.tracking || {}).length;
+            option.value = session.id;
+            option.textContent = `${session.name} (${count})`;
+            this.locationSelect.appendChild(option);
+        });
+
+        this.locationSelect.value = model.activeSessionId || currentValue;
     }
 
     formatTime(timestamp) {
@@ -361,6 +578,22 @@ class CSDApp {
         this.btnFav = document.getElementById('btnFav');
         this.listContainer = document.getElementById('paradeList');
         this.btnResetTrack = document.getElementById('btnResetTrack');
+        this.locationSelect = document.getElementById('locationSelect');
+        this.btnAddLocation = document.getElementById('btnAddLocation');
+        this.btnDataActions = document.getElementById('btnDataActions');
+        this.dataPanel = document.getElementById('dataPanel');
+        this.btnExportState = document.getElementById('btnExportState');
+        this.btnImportData = document.getElementById('btnImportData');
+        this.importFileInput = document.getElementById('importFileInput');
+        this.btnResetCurrent = document.getElementById('btnResetCurrent');
+        this.btnResetTimes = document.getElementById('btnResetTimes');
+        this.btnResetFavorites = document.getElementById('btnResetFavorites');
+        this.btnResetGroups = document.getElementById('btnResetGroups');
+        this.confirmModal = document.getElementById('confirmModal');
+        this.confirmTitle = document.getElementById('confirmTitle');
+        this.confirmMessage = document.getElementById('confirmMessage');
+        this.confirmCancel = document.getElementById('confirmCancel');
+        this.confirmAccept = document.getElementById('confirmAccept');
 
         this.init();
     }
@@ -398,6 +631,37 @@ class CSDApp {
             this.updateView();
         });
 
+        this.locationSelect.addEventListener('change', () => {
+            this.model.setActiveSession(this.locationSelect.value);
+            this.updateView();
+        });
+
+        this.btnAddLocation.addEventListener('click', () => {
+            const name = window.prompt('Name für den neuen Standort:', `Standort ${this.model.sessions.length + 1}`);
+            if (!name) return;
+
+            this.model.addLocation(name);
+            this.updateView();
+        });
+
+        this.btnDataActions.addEventListener('click', () => {
+            this.dataPanel.classList.toggle('hidden');
+        });
+
+        this.btnExportState.addEventListener('click', () => {
+            this.exportState();
+        });
+
+        this.btnImportData.addEventListener('click', () => {
+            this.importFileInput.value = '';
+            this.importFileInput.click();
+        });
+
+        this.importFileInput.addEventListener('change', () => {
+            const [file] = this.importFileInput.files;
+            if (file) this.importDataFile(file);
+        });
+
         // Event Delegation für Buttons in der Liste
         this.listContainer.addEventListener('click', (e) => {
             // Favoriten
@@ -419,13 +683,121 @@ class CSDApp {
             }
         });
 
-        // Markierungen zurücksetzen
-        this.btnResetTrack.addEventListener('click', () => {
-            if(confirm('Möchtest du die gesammelten Zeiten wirklich zurücksetzen?')) {
-                this.model.clearTracking();
-                this.updateView();
-            }
+        this.btnResetTrack.addEventListener('click', () => this.confirmResetCurrentLocation());
+        this.btnResetCurrent.addEventListener('click', () => this.confirmResetCurrentLocation());
+
+        this.btnResetTimes.addEventListener('click', async () => {
+            const ok = await this.confirmAction({
+                title: 'Alle Zeiten zurücksetzen?',
+                message: 'Alle erfassten Zeiten an allen Standorten werden gelöscht. Gruppen und Favoriten bleiben erhalten.',
+                confirmText: 'Zeiten löschen'
+            });
+            if (!ok) return;
+
+            this.model.clearAllTracking();
+            this.updateView();
         });
+
+        this.btnResetFavorites.addEventListener('click', async () => {
+            const ok = await this.confirmAction({
+                title: 'Favoriten zurücksetzen?',
+                message: 'Alle Favoriten werden gelöscht. Gruppen und Zeiten bleiben erhalten.',
+                confirmText: 'Favoriten löschen'
+            });
+            if (!ok) return;
+
+            this.model.clearFavorites();
+            this.updateView();
+        });
+
+        this.btnResetGroups.addEventListener('click', async () => {
+            const ok = await this.confirmAction({
+                title: 'Gruppen zurücksetzen?',
+                message: 'Importierte Gruppen werden entfernt und die mitgelieferte Cologne-Pride-Liste wird wieder verwendet. Zeiten und Favoriten bleiben gespeichert.',
+                confirmText: 'Gruppen zurücksetzen'
+            });
+            if (!ok) return;
+
+            this.model.resetGroups();
+            this.updateView();
+        });
+    }
+
+    async confirmResetCurrentLocation() {
+        const session = this.model.getActiveSession();
+        const ok = await this.confirmAction({
+            title: 'Standort-Zeiten zurücksetzen?',
+            message: `Alle erfassten Zeiten für "${session.name}" werden gelöscht. Andere Standorte bleiben erhalten.`,
+            confirmText: 'Ort leeren'
+        });
+        if (!ok) return;
+
+        this.model.clearTracking();
+        this.updateView();
+    }
+
+    confirmAction({ title, message, confirmText }) {
+        return new Promise(resolve => {
+            this.confirmTitle.textContent = title;
+            this.confirmMessage.textContent = message;
+            this.confirmAccept.textContent = confirmText || 'Bestätigen';
+            this.confirmModal.classList.remove('hidden');
+            this.confirmModal.classList.add('flex');
+
+            const cleanup = (result) => {
+                this.confirmModal.classList.add('hidden');
+                this.confirmModal.classList.remove('flex');
+                this.confirmCancel.removeEventListener('click', onCancel);
+                this.confirmAccept.removeEventListener('click', onAccept);
+                this.confirmModal.removeEventListener('click', onBackdrop);
+                resolve(result);
+            };
+
+            const onCancel = () => cleanup(false);
+            const onAccept = () => cleanup(true);
+            const onBackdrop = (event) => {
+                if (event.target === this.confirmModal) cleanup(false);
+            };
+
+            this.confirmCancel.addEventListener('click', onCancel);
+            this.confirmAccept.addEventListener('click', onAccept);
+            this.confirmModal.addEventListener('click', onBackdrop);
+        });
+    }
+
+    exportState() {
+        const state = this.model.exportState();
+        const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');
+
+        link.href = url;
+        link.download = `cologne-pride-planer-${stamp}.json`;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+    }
+
+    async importDataFile(file) {
+        try {
+            const text = await file.text();
+            const payload = JSON.parse(text);
+            const ok = await this.confirmAction({
+                title: 'Daten importieren?',
+                message: 'Importierte Gruppen, Favoriten oder Standorte überschreiben passende lokale Daten. Vorher bei Bedarf exportieren.',
+                confirmText: 'Importieren'
+            });
+            if (!ok) return;
+
+            const changes = this.model.importData(payload);
+            this.updateView();
+            window.alert(`Importiert: ${changes.join(', ')}`);
+        } catch (error) {
+            console.error('Import fehlgeschlagen:', error);
+            window.alert(`Import fehlgeschlagen: ${error.message}`);
+        }
     }
 
     updateView() {

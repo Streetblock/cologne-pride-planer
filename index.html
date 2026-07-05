@@ -41,6 +41,22 @@
                 <button id="btnAll" class="filter-btn flex-1 py-2 text-sm font-medium rounded-lg bg-indigo-100 text-indigo-700 transition-colors">Alle</button>
                 <button id="btnFav" class="filter-btn flex-1 py-2 text-sm font-medium rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors">Favoriten</button>
             </div>
+
+            <div class="grid grid-cols-[1fr_auto_auto] gap-2 items-center">
+                <select id="locationSelect" class="min-w-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"></select>
+                <button id="btnAddLocation" class="rounded-lg bg-indigo-50 px-3 py-2 text-sm font-bold text-indigo-700 hover:bg-indigo-100 transition-colors">Neu</button>
+                <button id="btnDataActions" class="rounded-lg bg-gray-100 px-3 py-2 text-sm font-bold text-gray-700 hover:bg-gray-200 transition-colors">Daten</button>
+            </div>
+
+            <div id="dataPanel" class="hidden grid grid-cols-2 gap-2 rounded-lg border border-gray-200 bg-gray-50 p-2">
+                <button id="btnExportState" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-700 shadow-sm hover:bg-gray-100">Export</button>
+                <button id="btnImportData" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-700 shadow-sm hover:bg-gray-100">Import</button>
+                <button id="btnResetCurrent" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-red-700 shadow-sm hover:bg-red-50">Ort leeren</button>
+                <button id="btnResetTimes" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-red-700 shadow-sm hover:bg-red-50">Zeiten resetten</button>
+                <button id="btnResetFavorites" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-red-700 shadow-sm hover:bg-red-50">Favoriten resetten</button>
+                <button id="btnResetGroups" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-red-700 shadow-sm hover:bg-red-50">Gruppen resetten</button>
+                <input id="importFileInput" class="hidden" type="file" accept="application/json,.json">
+            </div>
         </div>
 
         <!-- Prognose Banner -->
@@ -65,6 +81,17 @@
             <p class="mt-1 text-sm text-gray-500">Versuche einen anderen Suchbegriff.</p>
         </div>
     </main>
+
+    <div id="confirmModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-gray-950/50 p-4">
+        <div class="w-full max-w-sm rounded-lg bg-white p-4 shadow-xl">
+            <h2 id="confirmTitle" class="text-base font-bold text-gray-900">Bestätigen</h2>
+            <p id="confirmMessage" class="mt-2 text-sm text-gray-600"></p>
+            <div class="mt-4 flex justify-end gap-2">
+                <button id="confirmCancel" class="rounded-lg bg-gray-100 px-3 py-2 text-sm font-bold text-gray-700 hover:bg-gray-200">Abbrechen</button>
+                <button id="confirmAccept" class="rounded-lg bg-red-600 px-3 py-2 text-sm font-bold text-white hover:bg-red-700">Bestätigen</button>
+            </div>
+        </div>
+    </div>
 
     <script src="app.js" defer></script>
 </body>
